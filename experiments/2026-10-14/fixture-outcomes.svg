@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="504pt" viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T20:47:24.066858</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504
+L 720 504
+L 720 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 25.2 113.8032
+L 380.088 113.8032
+L 380.088 41.6808
+L 25.2 41.6808
+z
+" style="fill: #142b4c; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="202.644" y="82.157" transform="rotate(-0 202.644 82.157)">Fixture outcome</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 380.088 113.8032
+L 547.488 113.8032
+L 547.488 41.6808
+L 380.088 41.6808
+z
+" style="fill: #142b4c; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="463.788" y="82.157" transform="rotate(-0 463.788 82.157)">Keyword overlap</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 547.488 113.8032
+L 694.8 113.8032
+L 694.8 41.6808
+L 547.488 41.6808
+z
+" style="fill: #142b4c; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="621.144" y="82.157" transform="rotate(-0 621.144 82.157)">TF-IDF</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 25.2 185.9256
+L 380.088 185.9256
+L 380.088 113.8032
+L 25.2 113.8032
+z
+" style="fill: #ffffff; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="60.6888" y="154.555337" transform="rotate(-0 60.6888 154.555337)">Relevant source in top 1</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 380.088 185.9256
+L 547.488 185.9256
+L 547.488 113.8032
+L 380.088 113.8032
+z
+" style="fill: #ffffff; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b4c" x="463.788" y="154.831275" transform="rotate(-0 463.788 154.831275)">15 / 16</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 547.488 185.9256
+L 694.8 185.9256
+L 694.8 113.8032
+L 547.488 113.8032
+z
+" style="fill: #ffffff; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b4c" x="621.144" y="154.831275" transform="rotate(-0 621.144 154.831275)">15 / 16</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 25.2 258.048
+L 380.088 258.048
+L 380.088 185.9256
+L 25.2 185.9256
+z
+" style="fill: #e9f0f8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="60.6888" y="226.677738" transform="rotate(-0 60.6888 226.677738)">Relevant source in top 3</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 380.088 258.048
+L 547.488 258.048
+L 547.488 185.9256
+L 380.088 185.9256
+z
+" style="fill: #e9f0f8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b4c" x="463.788" y="226.953675" transform="rotate(-0 463.788 226.953675)">15 / 16</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 547.488 258.048
+L 694.8 258.048
+L 694.8 185.9256
+L 547.488 185.9256
+z
+" style="fill: #e9f0f8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b4c" x="621.144" y="226.953675" transform="rotate(-0 621.144 226.953675)">16 / 16</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 25.2 330.1704
+L 380.088 330.1704
+L 380.088 258.048
+L 25.2 258.048
+z
+" style="fill: #fff0d8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7c4b00" x="60.6888" y="298.800138" transform="rotate(-0 60.6888 298.800138)">Unsupported query accepted</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 380.088 330.1704
+L 547.488 330.1704
+L 547.488 258.048
+L 380.088 258.048
+z
+" style="fill: #fff0d8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7c4b00" x="463.788" y="299.076075" transform="rotate(-0 463.788 299.076075)">3 / 6</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 547.488 330.1704
+L 694.8 330.1704
+L 694.8 258.048
+L 547.488 258.048
+z
+" style="fill: #fff0d8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #7c4b00" x="621.144" y="299.076075" transform="rotate(-0 621.144 299.076075)">3 / 6</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 25.2 402.2928
+L 380.088 402.2928
+L 380.088 330.1704
+L 25.2 330.1704
+z
+" style="fill: #e9f0f8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="60.6888" y="370.922537" transform="rotate(-0 60.6888 370.922537)">Relevant query rejected</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 380.088 402.2928
+L 547.488 402.2928
+L 547.488 330.1704
+L 380.088 330.1704
+z
+" style="fill: #e9f0f8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b4c" x="463.788" y="371.198475" transform="rotate(-0 463.788 371.198475)">0 / 16</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 547.488 402.2928
+L 694.8 402.2928
+L 694.8 330.1704
+L 547.488 330.1704
+z
+" style="fill: #e9f0f8; stroke: #ccd7e4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b4c" x="621.144" y="371.198475" transform="rotate(-0 621.144 371.198475)">0 / 16</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="39.6" y="451.08" transform="rotate(-0 39.6 451.08)">Counts from 22 authored queries on eight synthetic documents / 24 passages.</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="39.6" y="471.24" transform="rotate(-0 39.6 471.24)">Same corpus and queries, k=3; keyword gate &gt;0; TF-IDF gate ≥0.15. Score scales differ.</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="39.6" y="491.4" transform="rotate(-0 39.6 491.4)">Fixture functionality testing; not independent validation or an enterprise accuracy estimate.</text>
+  </g>
+ </g>
+</svg>

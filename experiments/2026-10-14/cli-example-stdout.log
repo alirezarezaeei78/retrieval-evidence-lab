@@ -1,0 +1,29 @@
+{
+  "query": "restore deleted project",
+  "method": "tfidf",
+  "k": 3,
+  "threshold": 0.15,
+  "accepted": true,
+  "reason": "Lexical matches found; inspect excerpts before using them.",
+  "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+  "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+  "document_count": 8,
+  "passage_count": 24,
+  "results": [
+    {
+      "passage_id": "backup:L6-L7",
+      "source_id": "backup",
+      "title": "Backup runbook",
+      "line_start": 6,
+      "line_end": 7,
+      "excerpt": "To restore a deleted project, choose a snapshot and verify its checksum.\nTest a restore monthly; record whether the recovered files open correctly.",
+      "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+      "score": 0.5683149227549357,
+      "matched_terms": [
+        "deleted",
+        "project",
+        "restore"
+      ]
+    }
+  ]
+}

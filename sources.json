@@ -1,0 +1,37 @@
+{
+  "checked_date": "2026-10-14",
+  "classification": "Established method implemented locally; no paper-reported outcomes used",
+  "sources": [
+    {
+      "url": "https://scikit-learn.org/1.4/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html",
+      "version": "scikit-learn 1.4.2",
+      "used_for": "Exact analyzer, token pattern, stop-word, IDF and normalization parameters; L2 dot-product equivalence",
+      "limits": "Lexical features; English stop words have known limitations; no semantic entailment guarantee"
+    },
+    {
+      "url": "https://scikit-learn.org/1.4/modules/feature_extraction.html#tfidf-term-weighting",
+      "version": "1.4 documentation",
+      "used_for": "Smooth IDF formula and word-feature explanation",
+      "limits": "Documentation supports the algorithm, not this app\u2019s measured outcomes"
+    },
+    {
+      "url": "https://docs.python.org/3.12/library/http.server.html",
+      "version": "Python 3.12",
+      "used_for": "Local HTTP server interface and production-use warning",
+      "limits": "Local development runner only"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/about.html",
+      "used_for": "Dependency BSD licence attribution",
+      "licence": "BSD-3-Clause"
+    }
+  ],
+  "data": {
+    "origin": "Fresh authored synthetic Markdown documents and query fixtures",
+    "licence": "MIT, same as repository",
+    "private_data": false,
+    "external_downloads": false,
+    "redistribution": "Authored fixtures and aggregate results included"
+  },
+  "measured_outcomes": "Only experiments/2026-10-14/results.json and query-results.json; no external performance claims"
+}

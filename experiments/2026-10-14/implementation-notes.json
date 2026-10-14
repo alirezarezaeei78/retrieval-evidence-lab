@@ -1,0 +1,8 @@
+{
+  "reason": "Corrected extra escaping in saved token-pattern metadata; executed tokenizer, corpus, labels, ranking, thresholds and all algorithm settings unchanged. Added configuration parity check and prevented changing browser source inputs during an active search. No evaluation-driven threshold or ranking tuning.",
+  "original_declaration_preserved": "declarations/original-declared-inputs.json",
+  "original_config_preserved": "declarations/original-config.json",
+  "original_outputs_preserved": "first-run-results.json",
+  "publication_classification": "Synthetic fixture testing; subsequent rerun remains development/exploratory, not independent validation.",
+  "cross_platform_and_title_note": "Normalised source/fixture files to LF for cross-platform Git reproducibility. Corrected saved regex escaping without changing the executed tokenizer. Display titles now use document Markdown headings. Ranking, thresholds, labels and decoded corpus text unchanged. Prior fixture outcomes remain exposed and are not independent validation."
+}

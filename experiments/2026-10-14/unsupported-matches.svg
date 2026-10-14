@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="604.8pt" viewBox="0 0 720 604.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T20:47:24.154246</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 604.8
+L 720 604.8
+L 720 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 38.52 177.2064
+L 681.48 177.2064
+Q 688.248 177.2064 688.248 171.70272
+L 688.248 36.86256
+Q 688.248 31.35888 681.48 31.35888
+L 38.52 31.35888
+Q 31.752 31.35888 31.752 36.86256
+L 31.752 171.70272
+Q 31.752 177.2064 38.52 177.2064
+z
+" clip-path="url(#pcb7903864c)" style="fill: #fff8eb; stroke: #ac6a07; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 38.52 336.81312
+L 681.48 336.81312
+Q 688.248 336.81312 688.248 331.30944
+L 688.248 196.46928
+Q 688.248 190.9656 681.48 190.9656
+L 38.52 190.9656
+Q 31.752 190.9656 31.752 196.46928
+L 31.752 331.30944
+Q 31.752 336.81312 38.52 336.81312
+z
+" clip-path="url(#pcb7903864c)" style="fill: #fff8eb; stroke: #ac6a07; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 38.52 496.41984
+L 681.48 496.41984
+Q 688.248 496.41984 688.248 490.91616
+L 688.248 356.076
+Q 688.248 350.57232 681.48 350.57232
+L 38.52 350.57232
+Q 31.752 350.57232 31.752 356.076
+L 31.752 490.91616
+Q 31.752 496.41984 38.52 496.41984
+z
+" clip-path="url(#pcb7903864c)" style="fill: #fff8eb; stroke: #ac6a07; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="52.056" y="61.62912" transform="rotate(-0 52.056 61.62912)">refund requests after two years</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7c4b00" x="52.056" y="86.39568" transform="rotate(-0 52.056 86.39568)">Returned returns:L3-L4 · score 0.5361 · declared unsupported</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="52.056" y="116.768681" transform="rotate(-0 52.056 116.768681)">In this synthetic example, a customer may request a refund within 14 days of delivery.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #066f72" x="52.056" y="152.43984" transform="rotate(-0 52.056 152.43984)">Matched terms: refund</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="52.056" y="221.23584" transform="rotate(-0 52.056 221.23584)">which authentication factor is legally mandatory</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7c4b00" x="52.056" y="246.0024" transform="rotate(-0 52.056 246.0024)">Returned access:L6-L7 · score 0.4335 · declared unsupported</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="52.056" y="276.375401" transform="rotate(-0 52.056 276.375401)">Use a second authentication factor for team accounts.</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #066f72" x="52.056" y="312.04656" transform="rotate(-0 52.056 312.04656)">Matched terms: authentication, factor</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="52.056" y="380.84256" transform="rotate(-0 52.056 380.84256)">exact service recovery time guarantee</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7c4b00" x="52.056" y="405.60912" transform="rotate(-0 52.056 405.60912)">Returned incident:L3-L4 · score 0.2666 · declared unsupported</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="52.056" y="435.982121" transform="rotate(-0 52.056 435.982121)">Capture the service name, event time and impact in an incident report.</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #066f72" x="52.056" y="471.65328" transform="rotate(-0 52.056 471.65328)">Matched terms: service, time</text>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b4c" x="39.6" y="586.656" transform="rotate(-0 39.6 586.656)">Executed TF-IDF examples: lexical overlap is not entailment. Inspect source limits; no answer is generated.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcb7903864c">
+   <rect x="21.6" y="12.096" width="676.8" height="550.368"/>
+  </clipPath>
+ </defs>
+</svg>

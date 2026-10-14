@@ -1,0 +1,5 @@
+{
+  "workflow": "Schematic of the implemented local pipeline. Document-only TF-IDF fit, source line spans, fixed positive-score gate, deterministic top-three results and structured exports. Eight synthetic documents; no generated answers.",
+  "fixture-outcomes": "Measured counts on 16 relevant and six unsupported authored queries, eight synthetic documents and 24 passages. Keyword: top-one/top-three 15/16 and 15/16. TF-IDF: 15/16 and 16/16. Both accepted 3/6 unsupported queries and rejected 0/16 relevant queries. k=3; different fixed score scales/gates. Functionality fixtures, not independent validation.",
+  "unsupported-matches": "Three executed unsupported TF-IDF matches. Refund after two years returned returns:L3-L4, score 0.5361, whose source limits refunds to 14 days. A legal-mandatory-authentication query returned access:L6-L7 at 0.4335 without legal evidence. An exact recovery-time guarantee query returned incident:L3-L4 at 0.2666 without a deadline. Similarity is not entailment; no answer is generated."
+}

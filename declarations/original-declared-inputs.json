@@ -1,0 +1,18 @@
+{
+  "declared_at": "2026-10-14T20:20:03.601543+03:30",
+  "files_sha256": {
+    "examples/corpus/access.md": "cf8db4ab525cf2b3e373daf11681e04b0838d7771233d60a031c1845819c7244",
+    "examples/corpus/backup.md": "364a3c0fdcd03f4d8bd293fffc387eca95b9643890b4c2e9d41264b138774085",
+    "examples/corpus/cache.md": "c5eb7f5b56cd829d1498d1c701a809e39ce53bed0e48481b27b58842ef55661c",
+    "examples/corpus/evaluation.md": "8d900be8c912ab52ce980d5bd92a79b2901fee98c45b9d3c6a1af1ae481530c0",
+    "examples/corpus/export.md": "80e87745c6423076f34145ccd886ef343e0a4af7997e657591878926868c9bd8",
+    "examples/corpus/incident.md": "d62abcefce74747eebfd401314c21a741dac28624032240c83e39f27c1445a9c",
+    "examples/corpus/invoice.md": "817287480399e38bd5159d29aaee232afd578df08057bf8c14d272b740579b5f",
+    "examples/corpus/returns.md": "34839625a114a44258aebe198b73c88fa76e9b87d3643ac066219f6e0c438672",
+    "examples/queries.json": "6e65306c8a1f2c0a2489fdc2f51b8b035a40ada9f1d9a84842a9ac59d5107d86",
+    "config.json": "7f52b8328cfe521353ad2421a1563ce11508c931fe1dbb46775830fcbc40fb64",
+    "PROTOCOL.md": "39b3418f90c592ec18b1eb609f126a4d271d0c9d5075a41b44766ff5ec9633c0"
+  },
+  "parameters_frozen_before_execution": true,
+  "results_unknown": true
+}

@@ -21,35 +21,35 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 734.4 
-L 777.6 734.4 
-L 777.6 0 
-L 0 0 
+   <path d="M 0 734.4
+L 777.6 734.4
+L 777.6 0
+L 0 0
 z
 " style="fill: #f7f5ed"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 46.656 336.3552 
-L 730.944 336.3552 
-L 730.944 267.3216 
-L 46.656 267.3216 
+    <path d="M 46.656 336.3552
+L 730.944 336.3552
+L 730.944 267.3216
+L 46.656 267.3216
 z
 " clip-path="url(#p099c5f16b0)" style="fill: #e3ece7; stroke: #e3ece7; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 46.656 424.4832 
-L 730.944 424.4832 
-L 730.944 355.4496 
-L 46.656 355.4496 
+    <path d="M 46.656 424.4832
+L 730.944 424.4832
+L 730.944 355.4496
+L 46.656 355.4496
 z
 " clip-path="url(#p099c5f16b0)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 46.656 512.6112 
-L 730.944 512.6112 
-L 730.944 443.5776 
-L 46.656 443.5776 
+    <path d="M 46.656 512.6112
+L 730.944 512.6112
+L 730.944 443.5776
+L 46.656 443.5776
 z
 " clip-path="url(#p099c5f16b0)" style="fill: #e3ece7; stroke: #e3ece7; stroke-linejoin: miter"/>
    </g>

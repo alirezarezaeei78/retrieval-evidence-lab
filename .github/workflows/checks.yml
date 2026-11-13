@@ -13,3 +13,4 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python evaluate.py --output local-output/ci
+      - run: python evaluate_workbench.py --output local-output/ci-workbench

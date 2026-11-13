@@ -1,12 +1,10 @@
 # Document Evidence Inspector
 
-A small local document-search app for business knowledge teams and developers who need to inspect the original passage behind a search result. Search your own UTF-8 `.txt`/`.md` files, review exact source lines and document hashes, and export the evidence as JSON or CSV.
+New 13 November release: compare a batch of queries, inspect token coverage and unsupported fixture matches, and export the same source/index/query snapshot. This is a local lexical search workbench; it does not generate or verify answers.
 
-**Local-only release.** No hosted demo, generated answers, API key, model download or third-party document transmission. Established lexical retrieval: TF-IDF and a transparent keyword baseline. A search score measures lexical similarity; it does not prove that a passage answers a question.
+## Run locally
 
-## Run it
-
-Python 3.12 is the tested runtime. From this repository:
+Python 3.12. Install in an isolated environment:
 
 ```sh
 python -m venv .venv
@@ -16,64 +14,67 @@ python -m pip install -r requirements.txt
 python app.py --port 8765
 ```
 
-Open **http://127.0.0.1:8765**. The server binds only to loopback. It is a development tool, not production hosting. Stop it with Ctrl+C. A second instance cannot share the same listening port.
+Open **http://127.0.0.1:8765**. It binds only to loopback; keep it local. No account, API key, pretrained download, hosted service or external document transmission.
 
-1. Keep the eight included synthetic example documents, or select your UTF-8 text/Markdown files.
-2. Enter `restore deleted project` and choose TF-IDF.
-3. Inspect the returned `backup:L6-L7` passage, score, matched terms and document SHA-256.
-4. Export JSON or CSV to preserve the exact report. Confirm the source meaning before acting on a match.
+1. Keep the eight included authored synthetic documents, or import UTF-8 TXT/Markdown files. Use only data you are authorized to process.
+2. For a single query, enter `restore deleted project` and inspect the source span before using it.
+3. Click **Load diagnostic queries**, then **Compare both methods**. The 22 known query annotations apply to the included example corpus only.
+4. Expand `none-04 · TFIDF`: the two-year-refund question retrieves a 14-day policy. A high lexical match is not proof of support.
+5. Download batch JSON and CSV. Both carry query IDs, exact scores/ranks/spans, document hashes, source snapshot, index/config snapshot and request hash. Rejected queries keep a blank-result row in CSV. Exports stream the saved report through a bounded same-origin form, without refitting or reranking.
 
-The file importer supports up to 20 documents, 50,000 UTF-8 bytes per file and 500,000 total. Source IDs must be unique lowercase ASCII identifiers. Queries are limited to 1,000 characters. PDFs, office documents, semantic embeddings and multilingual relevance are outside this release.
+For your own questions, enter a JSON list such as:
 
-## CLI and checks
-
-```sh
-python search.py --query "restore deleted project" --output local-output/example
-python -m unittest -v test_search.py
-python evaluate.py --output local-output/reproduction
-python render_figures.py
+```json
+[{"id":"my-query","query":"restore deleted project"}]
 ```
 
-The CLI creates `.json` and `.csv` reports. The evaluation command checks the saved input hashes before reporting outcomes. The fixture suite is deterministic; it does not need a random seed. Figure rendering uses the archived experiment results. Keep new reruns in `local-output/` to preserve the original record.
+Omit `relevant_sources` for unlabelled queries. `[]` is an explicit prior annotation that the corpus does not support a query; it is **not** inferred by the model. A nonempty list contains unique source IDs in the selected corpus. Labels affect diagnostics/metrics only, never scoring. The app marks unlabelled relevance and unsupported acceptance as unmeasured.
 
-## Checked results — 14 October 2026
+Limits:1–50 query records, IDs 1–64 ASCII characters, queries 1–1,000 characters;1–20 documents,50,000 UTF-8 bytes each and 500,000 total. Batch retrieval uses the fixed k=3. Invalid input errors do not silently discard a query. Source changes and query edits invalidate old batch exports. Empty/tokenless/unseen-vocabulary cases remain inspectable.
 
-Eight authored synthetic documents, 24 passages, 16 relevant queries and six unsupported queries; two development queries are excluded. All **40 automated correctness, numerical, export and HTTP checks passed**, with zero skips.
+## CLI and reproduction
 
-| Outcome | Keyword baseline | TF-IDF |
+```sh
+python workbench.py --queries examples/batch-queries.json --output local-output/batch
+python -m unittest -v test_search test_workbench
+python evaluate_workbench.py --output local-output/reproduction-2026-11-13
+python render_workbench_figures.py
+```
+
+The original single-query CLI is preserved:
+
+```sh
+python search.py --query "restore deleted project" --output local-output/single
+```
+
+See the frozen [protocol](experiments/2026-11-13/PROTOCOL.md), [input hashes](experiments/2026-11-13/protocol-frozen.json), [actual results](experiments/2026-11-13/results.json), [all 44 reports](experiments/2026-11-13/batch-report.json) and [CSV](experiments/2026-11-13/batch-report.csv). Historical 14 October records remain unchanged; new commands use local-output by default.
+
+## Measured functionality results —13 November 2026
+
+The same 8 authored documents,24 passages and 22 known query fixtures as October, with 2 development queries excluded. These are developer-visible diagnostics, **not independent enterprise validation**. No retrieval model, label, threshold or scoring rule was changed for this integration.
+
+| Outcome on identical queries | Keyword overlap | TF-IDF |
 | --- | ---: | ---: |
-| Relevant source in first result | 15/16 | 15/16 |
-| Relevant source among first three | 15/16 | 16/16 |
-| Relevant queries rejected | 0/16 | 0/16 |
-| Unsupported queries accepted | 3/6 | 3/6 |
+| Relevant source first |15/16|15/16|
+| Macro source Recall@3 |0.9375|1.0000|
+| Known unsupported accepted |3/6|3/6|
 
-TF-IDF uses a fixed 0.15 gate; keyword matching accepts any positive overlap. Their score scales differ, and the gates are not calibrated to equal acceptance. One top-three difference on these fixtures is not evidence of general superiority.
+Each relevant fixture has one source annotation, so these Recall@3 values correspond to 15/16 and 16/16 hits. Keyword accepts any positive unique-query-token overlap; TF-IDF uses 0.15. The score scales and gates are not calibrated to equal acceptance. One fixture difference is not general superiority. Both methods accept the same three unsupported questions: a two-year refund, a legal requirement and an exact recovery guarantee. The passages do not establish those claims.
 
-![Counts on authored synthetic fixtures](experiments/2026-10-14/fixture-outcomes.png)
+The new batch route matched the original single-query route for all 44 query–method reports and 79 accepted passages. Independent Python count/smooth-IDF/cosine arithmetic checked 1,056 passage scores, with maximum absolute difference 1.1102230246251565 e-16. JSON/CSV ranks and scores round-trip exactly. Actual desktop native downloads matched all 85 CSV rows and the evaluated JSON; exact displayed decimal strings matched all 79 accepted scores. Correctness checks and retained implementation corrections are in the experiment directory.
 
-The three unsupported TF-IDF matches expose a useful limit: a two-year refund question matches a 14-day policy; a legal-mandate question matches a synthetic authentication procedure; a recovery-guarantee question matches an incident-reporting instruction. The app deliberately shows the excerpt instead of treating the score as proof.
+## What the snapshots mean
 
-![Unsupported lexical matches and their source passages](experiments/2026-10-14/unsupported-matches.png)
+The source hash canonicalizes documents by source ID and includes their title and decoded text. Each passage retains its original source lines and text hash. The index hash additionally includes the declared preprocessing, scikit-learn version, fitted vocabulary/IDF, passage mapping and sparse matrix. The request hash includes query IDs/text/optional annotations, chosen methods and the index hash. Queries never extend vocabulary or fit IDF.
 
-## How it works
+These versioned hashes identify a declared report; they do not prove source truth, answer support or security, and cross-version hash identity is not guaranteed. The original single-search `corpus_sha 256` remains for compatibility and uses its historical serialization; do not compare it to the new versioned source hash.
 
-Paragraphs are split into passages of at most eight original source lines, without overlap. The vectorizer is fitted only on document passages. It uses English word unigrams, Unicode accent stripping, English stop words, smooth IDF and L2 normalization. A dot product gives cosine similarity. Positive matches passing the fixed gate are ranked, with deterministic source-ID/line tie-breaking. Each record retains the exact excerpt, original line span, matched terms, score and decoded-text SHA-256.
+## Data handling and limitations
 
-![Document input to ranked evidence and export workflow](experiments/2026-10-14/workflow.png)
+Text stays between your browser and the loopback process. No query logs or source files are saved by the server. Exports intentionally save selected reports locally. Literal markup is rendered with textContent; spreadsheet formula-like cells are prefixed in CSV, so those text cells intentionally differ from raw JSON. Fixed download names/Host/Origin/CSP/size checks reduce accidental misuse; this is not a production security audit. Do not expose the development server publicly.
 
-Browser checks covered actual search, an unseen-vocabulary no-result case, native JSON/CSV downloads matching the API/CLI, escaped literal HTML, labelled controls and keyboard focus. A narrow viewport showed no horizontal overflow; its screenshot capture was unavailable, so this is not a full mobile or accessibility certification.
+English lexical preprocessing does not reason reliably about negation, quantities, dates or policy conditions. Unicode preservation does not establish multilingual relevance. A no-result status does not prove that no answer exists. The user must inspect source meaning.
 
-## Reproduce and inspect
+Desktop single/batch workflow, local import, malformed/empty input recovery, stale-export prevention and native JSON/CSV parity were verified in Chrome. The requested 390 px override did not apply, so **mobile behavior remains unverified**. No mobile certification, performance improvement, runtime, adoption or business-impact claim is made.
 
-- [Declared protocol](PROTOCOL.md), [configuration](config.json) and [input hashes](declared-inputs.json).
-- [All 44 per-query method reports](experiments/2026-10-14/query-results.json), [aggregate results/environment](experiments/2026-10-14/results.json) and saved stdout.
-- [Implementation corrections](experiments/2026-10-14/implementation-notes.md) preserve earlier runs and distinguish repairs from evaluation tuning.
-- [Sources, versions and licences](sources.json); editable SVG figures and `render_figures.py`.
-
-## Limits and data handling
-
-These are hand-authored functionality fixtures visible during development, not independent enterprise validation. Lexical matching misses synonyms and does not reason reliably about negation, dates, quantities or policy conditions. The fixed threshold is uncalibrated. This release makes no latency, business-impact, adoption or security-audit claim.
-
-Source files remain on your machine. The browser sends text only to the loopback Python process. There are no external assets, model calls or query logs. HTML is rendered as text; formula-like CSV cells are prefixed for spreadsheet safety. Host/origin, size and path checks reduce accidental misuse, but this lightweight server must not be exposed as a public service.
-
-Code and all authored synthetic example documents/queries are available under the [MIT licence](LICENSE). Third-party dependencies keep their own licences. No private, customer or employer material is included.
+Code, synthetic corpus, query fixtures and original figures are MIT under the owner [LICENSE](LICENSE). Dependencies retain their licences. Primary method sources and version notes: [sources](experiments/2026-11-13/sources.json). No private customer/employer data is included.

@@ -1,0 +1,222 @@
+{
+  "executed_at": "2026-11-13T13:54:54.285306+00:00",
+  "classification": "New batch app integration; rerun of known authored synthetic fixtures, not independent validation",
+  "model_changed": false,
+  "documents": 8,
+  "passages": 24,
+  "query_count": 22,
+  "query_method_reports": 44,
+  "summaries": [
+    {
+      "method": "keyword",
+      "queries": 22,
+      "accepted": 19,
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "macro_source_recall_at_3": 0.9375,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3
+    },
+    {
+      "method": "tfidf",
+      "queries": 22,
+      "accepted": 19,
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "macro_source_recall_at_3": 1.0,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3
+    }
+  ],
+  "independent_summaries": [
+    {
+      "method": "keyword",
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "macro_source_recall_at_3": 0.9375,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3
+    },
+    {
+      "method": "tfidf",
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "macro_source_recall_at_3": 1.0,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3
+    }
+  ],
+  "batch_single_query_mismatches": 0,
+  "compared_accepted_passages": 79,
+  "independent_passage_scores_checked": 1056,
+  "independent_max_absolute_score_error": 1.1102230246251565e-16,
+  "csv_rows": 85,
+  "exact_json_csv_rank_score_parity": true,
+  "source_snapshot_sha256": "702764bcf2f1e69308b8b3f0263ca298ab1f979c582f622fed6f39075e3b281e",
+  "index_snapshot_sha256": "296930afd65d3e8e163186118c1320fe04c08cd53166855e76dbbb0c056548cd",
+  "protocol": {
+    "frozen_at": "2026-11-13T17:04:21.308828+03:30",
+    "protocol_sha256": "b0921e3a9da62209e5111a1759ddb19c12fd5ad3ae12c43e43d7137f3a4c5053",
+    "input_sha256": {
+      "examples/corpus/access.md": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+      "examples/corpus/backup.md": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+      "examples/corpus/cache.md": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+      "examples/corpus/evaluation.md": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+      "examples/corpus/export.md": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+      "examples/corpus/incident.md": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+      "examples/corpus/invoice.md": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+      "examples/corpus/returns.md": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+      "examples/queries.json": "0f64157540633abf1799b7cd29c2246dd806b60e7f6f185e99d46e8939fe9f1a",
+      "config.json": "a873ba6c8f6e9d56c93db3ebaa264ef76953c686bb93afd443883137833e9e78"
+    },
+    "base_commit": "01e77536840f8b34973d36e9179b04d15b29303a",
+    "results": "unknown before execution"
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "dependencies": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.4.2",
+      "matplotlib": "3.10.0",
+      "threadpoolctl": "3.6.0"
+    }
+  },
+  "source_sha256": {
+    "search.py": "82808aa6b44b75a8362158b568fb4272fea3314c476dbdfa602ca3874732bec7",
+    "workbench.py": "bd703938b4a9b5a22c376a1acee77577a2155842c511c001264b409ef29cc55a",
+    "app.py": "91474b6468d668739393096ff9ad23cf2635a6b1d87bdc37910ceef50eb6e181",
+    "evaluate_workbench.py": "f37fa8055136da0b24db1df4e430b0bc62e4cb53bb1b96fa3a55c106c652588a",
+    "test_workbench.py": "4988e035b7358df6efa1ed1e3050c91ceb0137196769b70d32e036d04055f8e6",
+    "web/ui.js": "60f7e1266660c9311c58a09568bb880f506b269b46a73e386fa77df6292fde9a",
+    "web/index.html": "c195a539f39eea3127fb012113a0d4001755de62e818404cd20a75346d70ce19",
+    "web/style.css": "843b2ac77834523cf3c52b53b7493b1678144d2a580efcc22d2d722c7bec9285"
+  },
+  "unsupported_matches": [
+    {
+      "id": "none-04",
+      "method": "keyword",
+      "query": "refund requests after two years",
+      "top_result": {
+        "passage_id": "returns:L3-L4",
+        "source_id": "returns",
+        "title": "Example returns policy",
+        "line_start": 3,
+        "line_end": 4,
+        "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+        "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+        "score": 0.3333333333333333,
+        "matched_terms": [
+          "refund"
+        ],
+        "rank": 1
+      }
+    },
+    {
+      "id": "none-04",
+      "method": "tfidf",
+      "query": "refund requests after two years",
+      "top_result": {
+        "passage_id": "returns:L3-L4",
+        "source_id": "returns",
+        "title": "Example returns policy",
+        "line_start": 3,
+        "line_end": 4,
+        "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+        "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+        "score": 0.5360736617385635,
+        "matched_terms": [
+          "refund"
+        ],
+        "rank": 1
+      }
+    },
+    {
+      "id": "none-05",
+      "method": "keyword",
+      "query": "which authentication factor is legally mandatory",
+      "top_result": {
+        "passage_id": "access:L6-L7",
+        "source_id": "access",
+        "title": "Example access checklist",
+        "line_start": 6,
+        "line_end": 7,
+        "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+        "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+        "score": 0.5,
+        "matched_terms": [
+          "authentication",
+          "factor"
+        ],
+        "rank": 1
+      }
+    },
+    {
+      "id": "none-05",
+      "method": "tfidf",
+      "query": "which authentication factor is legally mandatory",
+      "top_result": {
+        "passage_id": "access:L6-L7",
+        "source_id": "access",
+        "title": "Example access checklist",
+        "line_start": 6,
+        "line_end": 7,
+        "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+        "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+        "score": 0.4335431948804123,
+        "matched_terms": [
+          "authentication",
+          "factor"
+        ],
+        "rank": 1
+      }
+    },
+    {
+      "id": "none-06",
+      "method": "keyword",
+      "query": "exact service recovery time guarantee",
+      "top_result": {
+        "passage_id": "incident:L3-L4",
+        "source_id": "incident",
+        "title": "Example incident workflow",
+        "line_start": 3,
+        "line_end": 4,
+        "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+        "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+        "score": 0.4,
+        "matched_terms": [
+          "service",
+          "time"
+        ],
+        "rank": 1
+      }
+    },
+    {
+      "id": "none-06",
+      "method": "tfidf",
+      "query": "exact service recovery time guarantee",
+      "top_result": {
+        "passage_id": "incident:L3-L4",
+        "source_id": "incident",
+        "title": "Example incident workflow",
+        "line_start": 3,
+        "line_end": 4,
+        "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+        "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+        "score": 0.2666246533392469,
+        "matched_terms": [
+          "service",
+          "time"
+        ],
+        "rank": 1
+      }
+    }
+  ],
+  "limits": [
+    "Same known October corpus and22queries; developer-visible diagnostic evidence.",
+    "Thresholds differ by method and are not calibrated to equal acceptance.",
+    "Annotations are supplied fixture labels, never predicted answer support.",
+    "No semantic answer verification, runtime comparison or deployment claim."
+  ]
+}

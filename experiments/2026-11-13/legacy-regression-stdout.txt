@@ -1,0 +1,135 @@
+test_content_security_and_no_cache_headers (test_search.HTTPChecks.test_content_security_and_no_cache_headers) ... ok
+test_cross_origin_rejected (test_search.HTTPChecks.test_cross_origin_rejected) ... ok
+test_examples_and_static_assets (test_search.HTTPChecks.test_examples_and_static_assets) ... ok
+test_malformed_document_failure (test_search.HTTPChecks.test_malformed_document_failure) ... ok
+test_path_traversal_rejected (test_search.HTTPChecks.test_path_traversal_rejected) ... ok
+test_primary_search_and_export_workflow (test_search.HTTPChecks.test_primary_search_and_export_workflow) ... ok
+test_second_server_cannot_share_the_port (test_search.HTTPChecks.test_second_server_cannot_share_the_port) ... ok
+test_unexpected_host_rejected (test_search.HTTPChecks.test_unexpected_host_rejected) ... ok
+test_csv_formula_neutralisation (test_search.SearchChecks.test_csv_formula_neutralisation) ... ok
+test_csv_no_results_retains_query (test_search.SearchChecks.test_csv_no_results_retains_query) ... ok
+test_csv_values_and_excerpt_roundtrip (test_search.SearchChecks.test_csv_values_and_excerpt_roundtrip) ... ok
+test_deterministic_ties (test_search.SearchChecks.test_deterministic_ties) ... ok
+test_document_byte_limit (test_search.SearchChecks.test_document_byte_limit) ... ok
+test_document_change_changes_fingerprint (test_search.SearchChecks.test_document_change_changes_fingerprint) ... ok
+test_document_count_limit (test_search.SearchChecks.test_document_count_limit) ... ok
+test_duplicate_source_id (test_search.SearchChecks.test_duplicate_source_id) ... ok
+test_empty_and_oversized_query (test_search.SearchChecks.test_empty_and_oversized_query) ... ok
+test_empty_corpus (test_search.SearchChecks.test_empty_corpus) ... ok
+test_empty_document (test_search.SearchChecks.test_empty_document) ... ok
+test_exact_spans_and_hashes (test_search.SearchChecks.test_exact_spans_and_hashes) ... ok
+test_finite_bounded_scores (test_search.SearchChecks.test_finite_bounded_scores) ... ok
+test_inputs_unchanged (test_search.SearchChecks.test_inputs_unchanged) ... ok
+test_invalid_k (test_search.SearchChecks.test_invalid_k) ... ok
+test_invalid_method (test_search.SearchChecks.test_invalid_method) ... ok
+test_invalid_schema (test_search.SearchChecks.test_invalid_schema) ... ok
+test_invalid_source_id (test_search.SearchChecks.test_invalid_source_id) ... ok
+test_invalid_threshold (test_search.SearchChecks.test_invalid_threshold) ... ok
+test_invalid_utf8_file (test_search.SearchChecks.test_invalid_utf8_file) ... ok
+test_json_roundtrip (test_search.SearchChecks.test_json_roundtrip) ... ok
+test_l2_norm_and_manual_cosine (test_search.SearchChecks.test_l2_norm_and_manual_cosine) ... ok
+test_long_paragraph_segmentation (test_search.SearchChecks.test_long_paragraph_segmentation) ... ok
+test_no_query_vocabulary_leakage (test_search.SearchChecks.test_no_query_vocabulary_leakage) ... ok
+test_punctuation_only_rejects (test_search.SearchChecks.test_punctuation_only_rejects) ... ok
+test_saved_configuration_matches_executed_tokenizer (test_search.SearchChecks.test_saved_configuration_matches_executed_tokenizer) ... ok
+test_segment_invalid_limit (test_search.SearchChecks.test_segment_invalid_limit) ... ok
+test_title_limits (test_search.SearchChecks.test_title_limits) ... ok
+test_tokenless_corpus (test_search.SearchChecks.test_tokenless_corpus) ... ok
+test_total_byte_limit (test_search.SearchChecks.test_total_byte_limit) ... ok
+test_unicode_and_case_equivalence (test_search.SearchChecks.test_unicode_and_case_equivalence) ... ok
+test_unknown_vocabulary_rejects (test_search.SearchChecks.test_unknown_vocabulary_rejects) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.837s
+
+OK
+{
+  "executed_at": "2026-11-13T13:51:29.104043+00:00",
+  "classification": "Authored synthetic fixture testing; no independent validation",
+  "documents": 8,
+  "passages": 24,
+  "evaluation_queries": 22,
+  "development_queries_not_scored": [
+    "dev-1",
+    "dev-2"
+  ],
+  "checks_passed": 40,
+  "checks_skipped": 0,
+  "method_summary": [
+    {
+      "method": "keyword",
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "hits_at_3": 15,
+      "rejected_relevant": 0,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3,
+      "unsupported_rejected": 3
+    },
+    {
+      "method": "tfidf",
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "hits_at_3": 16,
+      "rejected_relevant": 0,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3,
+      "unsupported_rejected": 3
+    }
+  ],
+  "parameters": {
+    "k": 3,
+    "tfidf_threshold": 0.15,
+    "keyword_threshold": 0.0,
+    "passage_lines": 8,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "stop_words": "english",
+    "strip_accents": "unicode",
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "norm": "l2",
+    "smooth_idf": true,
+    "seed": "None; deterministic fixture search",
+    "corpus": "examples/corpus",
+    "queries": "examples/queries.json"
+  },
+  "input_files_sha256": {
+    "examples/corpus/access.md": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+    "examples/corpus/backup.md": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+    "examples/corpus/cache.md": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+    "examples/corpus/evaluation.md": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+    "examples/corpus/export.md": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+    "examples/corpus/incident.md": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+    "examples/corpus/invoice.md": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+    "examples/corpus/returns.md": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+    "examples/queries.json": "0f64157540633abf1799b7cd29c2246dd806b60e7f6f185e99d46e8939fe9f1a",
+    "config.json": "a873ba6c8f6e9d56c93db3ebaa264ef76953c686bb93afd443883137833e9e78",
+    "PROTOCOL.md": "39b3418f90c592ec18b1eb609f126a4d271d0c9d5075a41b44766ff5ec9633c0"
+  },
+  "source_code_sha256": {
+    "search.py": "82808aa6b44b75a8362158b568fb4272fea3314c476dbdfa602ca3874732bec7",
+    "app.py": "0234d1370737a442a9b8d5847b29fb4eda8b5bab9556b22b4c0a24b8e35a726c",
+    "test_search.py": "e0d8a095b488e37e69e19f18250255e6cff7cc928f7e8534082be1d2121313b5",
+    "evaluate.py": "68e97dbe2b88dc98c4d1a5f03f08a56bde6faff0a7af5f7f6f302cedebde1047"
+  },
+  "environment": {
+    "python": "3.12.9",
+    "platform": "Windows",
+    "dependencies": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.4.2",
+      "matplotlib": "3.10.0",
+      "threadpoolctl": "3.6.0"
+    }
+  },
+  "command": "python evaluate.py --output experiments/2026-10-14",
+  "limitations": [
+    "Eight synthetic documents and hand-authored queries; no independent validation.",
+    "Fixed uncalibrated lexical gates and incomparable score scales; no automatic optimal policy.",
+    "Lexical matching does not establish entailment, completeness or legal/semantic correctness.",
+    "No generated answers, hosted demo, runtime comparison, deployment or business-impact claim."
+  ]
+}

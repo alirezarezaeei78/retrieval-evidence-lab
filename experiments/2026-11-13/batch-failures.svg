@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="777.6pt" height="936pt" viewBox="0 0 777.6 936" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T17:20:24.982499</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 936 
+L 777.6 936 
+L 777.6 0 
+L 0 0 
+z
+" style="fill: #f7f5ed"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 46.656 376.272 
+L 730.944 376.272 
+Q 740.2752 376.272 740.2752 365.04 
+L 740.2752 173.16 
+Q 740.2752 161.928 730.944 161.928 
+L 46.656 161.928 
+Q 37.3248 161.928 37.3248 173.16 
+L 37.3248 365.04 
+Q 37.3248 376.272 46.656 376.272 
+z
+" clip-path="url(#p0c897e8eaa)" style="fill: #e3ece7"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 46.656 605.592 
+L 730.944 605.592 
+Q 740.2752 605.592 740.2752 594.36 
+L 740.2752 402.48 
+Q 740.2752 391.248 730.944 391.248 
+L 46.656 391.248 
+Q 37.3248 391.248 37.3248 402.48 
+L 37.3248 594.36 
+Q 37.3248 605.592 46.656 605.592 
+z
+" clip-path="url(#p0c897e8eaa)" style="fill: #e3ece7"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 46.656 834.912 
+L 730.944 834.912 
+Q 740.2752 834.912 740.2752 823.68 
+L 740.2752 631.8 
+Q 740.2752 620.568 730.944 620.568 
+L 46.656 620.568 
+Q 37.3248 620.568 37.3248 631.8 
+L 37.3248 823.68 
+Q 37.3248 834.912 46.656 834.912 
+z
+" clip-path="url(#p0c897e8eaa)" style="fill: #e3ece7"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #146d70" x="46.656" y="42.12" transform="rotate(-0 46.656 42.12)">MEASURED • RETAINED FAILURE CASES</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="46.656" y="84.24" transform="rotate(-0 46.656 84.24)">A matching passage may not answer</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="46.656" y="131.04" transform="rotate(-0 46.656 131.04)">TF-IDF accepted these known unsupported questions.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="66.096" y="212.109187" transform="rotate(-0 66.096 212.109187)">QUERY  refund requests after two years</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #146d70" x="66.096" y="264.8775" transform="rotate(-0 66.096 264.8775)">returns:L3-L4  •  score 0.5361</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(66.096 307.757344)">In this synthetic example, a customer may request a refund within 14</text>
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(66.096 331.960563)">days of delivery.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="66.096" y="441.429188" transform="rotate(-0 66.096 441.429188)">QUERY  which authentication factor is legally mandatory</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #146d70" x="66.096" y="494.1975" transform="rotate(-0 66.096 494.1975)">access:L6-L7  •  score 0.4335</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="66.096" y="537.077344" transform="rotate(-0 66.096 537.077344)">Use a second authentication factor for team accounts.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="66.096" y="670.749188" transform="rotate(-0 66.096 670.749188)">QUERY  exact service recovery time guarantee</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #146d70" x="66.096" y="723.5175" transform="rotate(-0 66.096 723.5175)">incident:L3-L4  •  score 0.2666</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(66.096 766.397344)">Capture the service name, event time and impact in an incident</text>
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(66.096 790.600563)">report.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(46.656 895.917656)">Exact first source lines shown; complete passages in the report.</text>
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(46.656 917.84332)">Authored synthetic policies. Scores are not answer confidence.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0c897e8eaa">
+   <rect x="0" y="0" width="777.6" height="936"/>
+  </clipPath>
+ </defs>
+</svg>

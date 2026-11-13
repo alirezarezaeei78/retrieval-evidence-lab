@@ -1,0 +1,144 @@
+[
+  {
+    "id": "rel-01",
+    "query": "restore deleted project",
+    "relevant_sources": [
+      "backup"
+    ]
+  },
+  {
+    "id": "rel-02",
+    "query": "encrypted snapshot nightly copy",
+    "relevant_sources": [
+      "backup"
+    ]
+  },
+  {
+    "id": "rel-03",
+    "query": "refund receipt order identifier",
+    "relevant_sources": [
+      "returns"
+    ]
+  },
+  {
+    "id": "rel-04",
+    "query": "damaged package report",
+    "relevant_sources": [
+      "returns"
+    ]
+  },
+  {
+    "id": "rel-05",
+    "query": "invalidate cached search after document changes",
+    "relevant_sources": [
+      "cache"
+    ]
+  },
+  {
+    "id": "rel-06",
+    "query": "remove deleted documents from search index",
+    "relevant_sources": [
+      "cache"
+    ]
+  },
+  {
+    "id": "rel-07",
+    "query": "repository roles permissions review",
+    "relevant_sources": [
+      "access"
+    ]
+  },
+  {
+    "id": "rel-08",
+    "query": "second authentication factor credentials",
+    "relevant_sources": [
+      "access"
+    ]
+  },
+  {
+    "id": "rel-09",
+    "query": "incident service error logs mitigation",
+    "relevant_sources": [
+      "incident"
+    ]
+  },
+  {
+    "id": "rel-10",
+    "query": "escalate customer-visible errors service owner",
+    "relevant_sources": [
+      "incident"
+    ]
+  },
+  {
+    "id": "rel-11",
+    "query": "freeze decision threshold calibration",
+    "relevant_sources": [
+      "evaluation"
+    ]
+  },
+  {
+    "id": "rel-12",
+    "query": "duplicate groups train test precision recall",
+    "relevant_sources": [
+      "evaluation"
+    ]
+  },
+  {
+    "id": "rel-13",
+    "query": "export query source passage line range",
+    "relevant_sources": [
+      "export"
+    ]
+  },
+  {
+    "id": "rel-14",
+    "query": "spreadsheet formula CSV JSON evidence",
+    "relevant_sources": [
+      "export"
+    ]
+  },
+  {
+    "id": "rel-15",
+    "query": "duplicate invoice identifier payment lookup",
+    "relevant_sources": [
+      "invoice"
+    ]
+  },
+  {
+    "id": "rel-16",
+    "query": "many-to-one unique payment keys unmatched records",
+    "relevant_sources": [
+      "invoice"
+    ]
+  },
+  {
+    "id": "none-01",
+    "query": "quantum neutrino telescope",
+    "relevant_sources": []
+  },
+  {
+    "id": "none-02",
+    "query": "orchid watering sunlight soil",
+    "relevant_sources": []
+  },
+  {
+    "id": "none-03",
+    "query": "sourdough fermentation temperature",
+    "relevant_sources": []
+  },
+  {
+    "id": "none-04",
+    "query": "refund requests after two years",
+    "relevant_sources": []
+  },
+  {
+    "id": "none-05",
+    "query": "which authentication factor is legally mandatory",
+    "relevant_sources": []
+  },
+  {
+    "id": "none-06",
+    "query": "exact service recovery time guarantee",
+    "relevant_sources": []
+  }
+]

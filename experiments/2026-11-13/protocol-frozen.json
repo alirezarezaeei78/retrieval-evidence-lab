@@ -1,0 +1,18 @@
+{
+  "frozen_at": "2026-11-13T17:04:21.308828+03:30",
+  "protocol_sha256": "b0921e3a9da62209e5111a1759ddb19c12fd5ad3ae12c43e43d7137f3a4c5053",
+  "input_sha256": {
+    "examples/corpus/access.md": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+    "examples/corpus/backup.md": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+    "examples/corpus/cache.md": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+    "examples/corpus/evaluation.md": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+    "examples/corpus/export.md": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+    "examples/corpus/incident.md": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+    "examples/corpus/invoice.md": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+    "examples/corpus/returns.md": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+    "examples/queries.json": "0f64157540633abf1799b7cd29c2246dd806b60e7f6f185e99d46e8939fe9f1a",
+    "config.json": "a873ba6c8f6e9d56c93db3ebaa264ef76953c686bb93afd443883137833e9e78"
+  },
+  "base_commit": "01e77536840f8b34973d36e9179b04d15b29303a",
+  "results": "unknown before execution"
+}

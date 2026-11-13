@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-13",
+  "method": "Established lexical retrieval; no recent-paper claim",
+  "sources": [
+    {
+      "url": "https://scikit-learn.org/1.4/modules/feature_extraction.html#text-feature-extraction",
+      "version": "1.4.2",
+      "type": "Official documentation",
+      "supports": "Smooth-IDF, bag-of-words limitations, L2-normalized TF-IDF and dot-product cosine."
+    },
+    {
+      "url": "https://scikit-learn.org/1.4/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html",
+      "version": "1.4.2",
+      "type": "Official API documentation",
+      "supports": "Corpus fit/query transform, English stop-word limitation, Unicode accent stripping and token pattern."
+    }
+  ],
+  "data_and_artwork": "Eight owner-authored synthetic documents and known22query fixtures, MIT; original authored figures; no copied third-party artwork.",
+  "libraries": "NumPy BSD-3-Clause; SciPy BSD-3-Clause; scikit-learn BSD-3-Clause; Matplotlib PSF-based; threadpoolctl BSD-3-Clause. Retain upstream notices."
+}

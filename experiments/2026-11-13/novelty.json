@@ -1,0 +1,12 @@
+{
+  "question": "Can batch search preserve query failures, snapshots and displayed/exported evidence?",
+  "data": "Same known8synthetic documents/24passages/22queries; MIT, development-visible",
+  "method": "Existing keyword overlap and TF-IDF; unchanged fixed gates/k3",
+  "intervention": "New batch browser/API/CLI integration, explicit annotations versus unlabelled diagnostics, source/index/request hashes, saved report download",
+  "outcome": "44reports matched singles;79passages+6no-results=85CSVrows; both retain3/6unsupported acceptance; no model quality improvement",
+  "novelty_scope": "New implemented integration, not a new retrieval model or scientific novelty",
+  "benchmark_exposure": "Known October fixtures, not independent validation",
+  "family": "nlp",
+  "editorial_pillar": "app_build",
+  "format": "article"
+}

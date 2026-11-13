@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="777.6pt" height="734.4pt" viewBox="0 0 777.6 734.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T17:20:24.909497</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 734.4 
+L 777.6 734.4 
+L 777.6 0 
+L 0 0 
+z
+" style="fill: #f7f5ed"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 46.656 336.3552 
+L 730.944 336.3552 
+L 730.944 267.3216 
+L 46.656 267.3216 
+z
+" clip-path="url(#p099c5f16b0)" style="fill: #e3ece7; stroke: #e3ece7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 46.656 424.4832 
+L 730.944 424.4832 
+L 730.944 355.4496 
+L 46.656 355.4496 
+z
+" clip-path="url(#p099c5f16b0)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 46.656 512.6112 
+L 730.944 512.6112 
+L 730.944 443.5776 
+L 46.656 443.5776 
+z
+" clip-path="url(#p099c5f16b0)" style="fill: #e3ece7; stroke: #e3ece7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #146d70" x="46.656" y="44.064" transform="rotate(-0 46.656 44.064)">MEASURED • KNOWN SYNTHETIC FIXTURES</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="46.656" y="88.128" transform="rotate(-0 46.656 88.128)">Better inspection ≠ better retrieval</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="46.656" y="132.192" transform="rotate(-0 46.656 132.192)">Same 16 relevant + 6 unsupported questions • k = 3</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173544" x="303.264" y="198.288" transform="rotate(-0 303.264 198.288)">Keyword</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173544" x="590.976" y="198.288" transform="rotate(-0 590.976 198.288)">TF-IDF</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173544" x="303.264" y="230.6016" transform="rotate(-0 303.264 230.6016)">positive overlap</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #173544" x="590.976" y="230.6016" transform="rotate(-0 590.976 230.6016)">fixed gate 0.15</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="62.208" y="289.3622" transform="rotate(-0 62.208 289.3622)">Relevant source first</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #146d70" x="303.264" y="320.852288" transform="rotate(-0 303.264 320.852288)">15 / 16</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #146d70" x="590.976" y="320.852288" transform="rotate(-0 590.976 320.852288)">15 / 16</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="62.208" y="377.4902" transform="rotate(-0 62.208 377.4902)">Source Recall@3</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #146d70" x="303.264" y="408.980288" transform="rotate(-0 303.264 408.980288)">0.9375</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #146d70" x="590.976" y="408.980288" transform="rotate(-0 590.976 408.980288)">1.0000</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #173544" x="62.208" y="465.6182" transform="rotate(-0 62.208 465.6182)">Unsupported accepted</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #146d70" x="303.264" y="497.108288" transform="rotate(-0 303.264 497.108288)">3 / 6</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 21px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #146d70" x="590.976" y="497.108288" transform="rotate(-0 590.976 497.108288)">3 / 6</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a5316" x="46.656" y="572.832" transform="rotate(-0 46.656 572.832)">The same three unsupported questions pass both gates.</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(46.656 632.7255)">New batch vs single: 0 mismatches across 44 reports.</text>
+    <text style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(46.656 656.72075)">Known developer-visible fixtures; not independent validation.</text>
+    <text style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #173544" transform="translate(46.656 680.716)">Score scales / gates are not calibrated to equal acceptance.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p099c5f16b0">
+   <rect x="0" y="0" width="777.6" height="734.4"/>
+  </clipPath>
+ </defs>
+</svg>

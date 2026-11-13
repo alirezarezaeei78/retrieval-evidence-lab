@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-13T13:47:57.120Z",
+  "desktop_single_query": true,
+  "batch_44_reports": true,
+  "native_json_download": "Downloaded report content verified; private path retained in local receipt",
+  "native_csv_download": "Downloaded report content verified; private path retained in local receipt",
+  "rendered_rank_decimal_strings_match": true,
+  "unicode_import": true,
+  "markup_shown_as_text": true,
+  "stale_export_disabled": true,
+  "malformed_json_error": true,
+  "empty_query_list_error": true,
+  "source_snapshot_changes": true,
+  "mobile_verified": false,
+  "mobile_blocker": "Documented viewport override had no effect: measured1920CSSpx after390request, reload and fresh tab. Reset afterward; no narrow-device support claimed.",
+  "screenshot": "browser-desktop-proof.png"
+}

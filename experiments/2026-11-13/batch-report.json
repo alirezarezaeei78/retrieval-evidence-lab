@@ -1,0 +1,3002 @@
+{
+  "schema_version": 1,
+  "source_snapshot_sha256": "702764bcf2f1e69308b8b3f0263ca298ab1f979c582f622fed6f39075e3b281e",
+  "index_snapshot_sha256": "296930afd65d3e8e163186118c1320fe04c08cd53166855e76dbbb0c056548cd",
+  "request_sha256": "d72169f0a8c160714a4d1cb4bc42afef96369a904fe8d07c85009f5c78b7a7d7",
+  "configuration": {
+    "methods": [
+      "keyword",
+      "tfidf"
+    ],
+    "k": 3,
+    "tfidf_threshold": 0.15,
+    "keyword_threshold": 0.0,
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "ngram_range": [
+      1,
+      1
+    ],
+    "stop_words": "english",
+    "strip_accents": "unicode",
+    "norm": "l2",
+    "smooth_idf": true,
+    "sublinear_tf": false,
+    "sklearn_version": "1.4.2",
+    "tie_policy": "score descending, source_id ascending, line_start ascending"
+  },
+  "sources": [
+    {
+      "source_id": "access",
+      "title": "Example access checklist",
+      "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e"
+    },
+    {
+      "source_id": "backup",
+      "title": "Backup runbook",
+      "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb"
+    },
+    {
+      "source_id": "cache",
+      "title": "Search cache notes",
+      "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986"
+    },
+    {
+      "source_id": "evaluation",
+      "title": "Model evaluation checklist",
+      "document_sha256": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8"
+    },
+    {
+      "source_id": "export",
+      "title": "Evidence report format",
+      "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0"
+    },
+    {
+      "source_id": "incident",
+      "title": "Example incident workflow",
+      "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5"
+    },
+    {
+      "source_id": "invoice",
+      "title": "Example invoice workflow",
+      "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58"
+    },
+    {
+      "source_id": "returns",
+      "title": "Example returns policy",
+      "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa"
+    }
+  ],
+  "document_count": 8,
+  "passage_count": 24,
+  "query_count": 22,
+  "summaries": [
+    {
+      "method": "keyword",
+      "queries": 22,
+      "accepted": 19,
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "macro_source_recall_at_3": 0.9375,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3
+    },
+    {
+      "method": "tfidf",
+      "queries": 22,
+      "accepted": 19,
+      "relevant_queries": 16,
+      "hits_at_1": 15,
+      "macro_source_recall_at_3": 1.0,
+      "unsupported_queries": 6,
+      "unsupported_accepted": 3
+    }
+  ],
+  "reports": [
+    {
+      "id": "rel-01",
+      "relevant_sources": [
+        "backup"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "deleted",
+          "project",
+          "restore"
+        ],
+        "known_terms": [
+          "deleted",
+          "project",
+          "restore"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "restore deleted project",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "backup:L6-L7",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "To restore a deleted project, choose a snapshot and verify its checksum.\nTest a restore monthly; record whether the recovered files open correctly.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 1.0,
+          "matched_terms": [
+            "deleted",
+            "project",
+            "restore"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "access:L3-L4",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Grant repository access through named team roles.\nReview permissions monthly and remove access when a project role ends.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.3333333333333333,
+          "matched_terms": [
+            "project"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "cache:L6-L7",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A deleted document must no longer appear in retrieved passages.\nRebuild the local index after adding, editing or removing source documents.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.3333333333333333,
+          "matched_terms": [
+            "deleted"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-01",
+      "relevant_sources": [
+        "backup"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "deleted",
+          "project",
+          "restore"
+        ],
+        "known_terms": [
+          "deleted",
+          "project",
+          "restore"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "restore deleted project",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "backup:L6-L7",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "To restore a deleted project, choose a snapshot and verify its checksum.\nTest a restore monthly; record whether the recovered files open correctly.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.5683149227549357,
+          "matched_terms": [
+            "deleted",
+            "project",
+            "restore"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-02",
+      "relevant_sources": [
+        "backup"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "copy",
+          "encrypted",
+          "nightly",
+          "snapshot"
+        ],
+        "known_terms": [
+          "copy",
+          "encrypted",
+          "snapshot"
+        ],
+        "oov_terms": [
+          "nightly"
+        ],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "encrypted snapshot nightly copy",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "backup:L3-L4",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Create an encrypted snapshot every night.\nStore a second copy in a separate storage location.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.75,
+          "matched_terms": [
+            "copy",
+            "encrypted",
+            "snapshot"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "backup:L6-L7",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "To restore a deleted project, choose a snapshot and verify its checksum.\nTest a restore monthly; record whether the recovered files open correctly.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.25,
+          "matched_terms": [
+            "snapshot"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-02",
+      "relevant_sources": [
+        "backup"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "copy",
+          "encrypted",
+          "nightly",
+          "snapshot"
+        ],
+        "known_terms": [
+          "copy",
+          "encrypted",
+          "snapshot"
+        ],
+        "oov_terms": [
+          "nightly"
+        ],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "encrypted snapshot nightly copy",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "backup:L3-L4",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Create an encrypted snapshot every night.\nStore a second copy in a separate storage location.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.5456019006114067,
+          "matched_terms": [
+            "copy",
+            "encrypted",
+            "snapshot"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-03",
+      "relevant_sources": [
+        "returns"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "identifier",
+          "order",
+          "receipt",
+          "refund"
+        ],
+        "known_terms": [
+          "identifier",
+          "order",
+          "receipt",
+          "refund"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "refund receipt order identifier",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "returns:L3-L4",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 1.0,
+          "matched_terms": [
+            "identifier",
+            "order",
+            "receipt",
+            "refund"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "returns:L6-L7",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Refunds go to the original payment method after inspection.\nDamaged packages should be reported with an order identifier and a description.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.5,
+          "matched_terms": [
+            "identifier",
+            "order"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "export:L3-L4",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An evidence report contains the query, source identifier and passage line range.\nInclude the exact excerpt, document hash and lexical similarity score.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.25,
+          "matched_terms": [
+            "identifier"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-03",
+      "relevant_sources": [
+        "returns"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "identifier",
+          "order",
+          "receipt",
+          "refund"
+        ],
+        "known_terms": [
+          "identifier",
+          "order",
+          "receipt",
+          "refund"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "refund receipt order identifier",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "returns:L3-L4",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.6360554281994235,
+          "matched_terms": [
+            "identifier",
+            "order",
+            "receipt",
+            "refund"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "returns:L6-L7",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Refunds go to the original payment method after inspection.\nDamaged packages should be reported with an order identifier and a description.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.23343738424802943,
+          "matched_terms": [
+            "identifier",
+            "order"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-04",
+      "relevant_sources": [
+        "returns"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "damaged",
+          "package",
+          "report"
+        ],
+        "known_terms": [
+          "damaged",
+          "report"
+        ],
+        "oov_terms": [
+          "package"
+        ],
+        "annotation": "known_relevant",
+        "hit_at_1": false,
+        "source_recall_at_3": 0.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "damaged package report",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "evaluation:L6-L7",
+          "source_id": "evaluation",
+          "title": "Model evaluation checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Report precision and recall with the underlying confusion counts.\nCheck whether duplicate groups cross the train and test boundaries.",
+          "document_sha256": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+          "score": 0.3333333333333333,
+          "matched_terms": [
+            "report"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "export:L1-L1",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Evidence report format",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.3333333333333333,
+          "matched_terms": [
+            "report"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "export:L3-L4",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An evidence report contains the query, source identifier and passage line range.\nInclude the exact excerpt, document hash and lexical similarity score.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.3333333333333333,
+          "matched_terms": [
+            "report"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-04",
+      "relevant_sources": [
+        "returns"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "damaged",
+          "package",
+          "report"
+        ],
+        "known_terms": [
+          "damaged",
+          "report"
+        ],
+        "oov_terms": [
+          "package"
+        ],
+        "annotation": "known_relevant",
+        "hit_at_1": false,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "damaged package report",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "export:L1-L1",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Evidence report format",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.2681317805729505,
+          "matched_terms": [
+            "report"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "returns:L6-L7",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Refunds go to the original payment method after inspection.\nDamaged packages should be reported with an order identifier and a description.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.2636628875713622,
+          "matched_terms": [
+            "damaged"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-05",
+      "relevant_sources": [
+        "cache"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "cached",
+          "changes",
+          "document",
+          "invalidate",
+          "search"
+        ],
+        "known_terms": [
+          "cached",
+          "changes",
+          "document",
+          "invalidate",
+          "search"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "invalidate cached search after document changes",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "cache:L3-L4",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "A cached search result must include the document content hash.\nWhen a document changes, invalidate results linked to its old hash.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 1.0,
+          "matched_terms": [
+            "cached",
+            "changes",
+            "document",
+            "invalidate",
+            "search"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "cache:L1-L1",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Search cache notes",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.2,
+          "matched_terms": [
+            "search"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "cache:L6-L7",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A deleted document must no longer appear in retrieved passages.\nRebuild the local index after adding, editing or removing source documents.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.2,
+          "matched_terms": [
+            "document"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-05",
+      "relevant_sources": [
+        "cache"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "cached",
+          "changes",
+          "document",
+          "invalidate",
+          "search"
+        ],
+        "known_terms": [
+          "cached",
+          "changes",
+          "document",
+          "invalidate",
+          "search"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "invalidate cached search after document changes",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "cache:L3-L4",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "A cached search result must include the document content hash.\nWhen a document changes, invalidate results linked to its old hash.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.6196027870244161,
+          "matched_terms": [
+            "cached",
+            "changes",
+            "document",
+            "invalidate",
+            "search"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "cache:L1-L1",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Search cache notes",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.22308676148018572,
+          "matched_terms": [
+            "search"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-06",
+      "relevant_sources": [
+        "cache"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "deleted",
+          "documents",
+          "index",
+          "remove",
+          "search"
+        ],
+        "known_terms": [
+          "deleted",
+          "documents",
+          "index",
+          "remove",
+          "search"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "remove deleted documents from search index",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "cache:L6-L7",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A deleted document must no longer appear in retrieved passages.\nRebuild the local index after adding, editing or removing source documents.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.6,
+          "matched_terms": [
+            "deleted",
+            "documents",
+            "index"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "access:L3-L4",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Grant repository access through named team roles.\nReview permissions monthly and remove access when a project role ends.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.2,
+          "matched_terms": [
+            "remove"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "backup:L6-L7",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "To restore a deleted project, choose a snapshot and verify its checksum.\nTest a restore monthly; record whether the recovered files open correctly.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.2,
+          "matched_terms": [
+            "deleted"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-06",
+      "relevant_sources": [
+        "cache"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "deleted",
+          "documents",
+          "index",
+          "remove",
+          "search"
+        ],
+        "known_terms": [
+          "deleted",
+          "documents",
+          "index",
+          "remove",
+          "search"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "remove deleted documents from search index",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "cache:L6-L7",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A deleted document must no longer appear in retrieved passages.\nRebuild the local index after adding, editing or removing source documents.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.35832418927147286,
+          "matched_terms": [
+            "deleted",
+            "documents",
+            "index"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "cache:L1-L1",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Search cache notes",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.2196958335613787,
+          "matched_terms": [
+            "search"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-07",
+      "relevant_sources": [
+        "access"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "permissions",
+          "repository",
+          "review",
+          "roles"
+        ],
+        "known_terms": [
+          "permissions",
+          "repository",
+          "review",
+          "roles"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "repository roles permissions review",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "access:L3-L4",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Grant repository access through named team roles.\nReview permissions monthly and remove access when a project role ends.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 1.0,
+          "matched_terms": [
+            "permissions",
+            "repository",
+            "review",
+            "roles"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "export:L6-L7",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Export JSON for full structured records and CSV for review in a spreadsheet.\nNeutralise formula-like CSV cells before opening a report in spreadsheet software.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.25,
+          "matched_terms": [
+            "review"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "invoice:L6-L7",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A many-to-one join requires unique keys in the payment lookup table.\nUnmatched records go to a human review queue rather than being silently discarded.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.25,
+          "matched_terms": [
+            "review"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-07",
+      "relevant_sources": [
+        "access"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "permissions",
+          "repository",
+          "review",
+          "roles"
+        ],
+        "known_terms": [
+          "permissions",
+          "repository",
+          "review",
+          "roles"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "repository roles permissions review",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "access:L3-L4",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Grant repository access through named team roles.\nReview permissions monthly and remove access when a project role ends.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.5028561628354351,
+          "matched_terms": [
+            "permissions",
+            "repository",
+            "review",
+            "roles"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-08",
+      "relevant_sources": [
+        "access"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "authentication",
+          "credentials",
+          "factor",
+          "second"
+        ],
+        "known_terms": [
+          "authentication",
+          "credentials",
+          "factor",
+          "second"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "second authentication factor credentials",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "access:L6-L7",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 1.0,
+          "matched_terms": [
+            "authentication",
+            "credentials",
+            "factor",
+            "second"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "backup:L3-L4",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Create an encrypted snapshot every night.\nStore a second copy in a separate storage location.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.25,
+          "matched_terms": [
+            "second"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-08",
+      "relevant_sources": [
+        "access"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "authentication",
+          "credentials",
+          "factor",
+          "second"
+        ],
+        "known_terms": [
+          "authentication",
+          "credentials",
+          "factor",
+          "second"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "second authentication factor credentials",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "access:L6-L7",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.5962773042610325,
+          "matched_terms": [
+            "authentication",
+            "credentials",
+            "factor",
+            "second"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-09",
+      "relevant_sources": [
+        "incident"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "error",
+          "incident",
+          "logs",
+          "mitigation",
+          "service"
+        ],
+        "known_terms": [
+          "error",
+          "incident",
+          "logs",
+          "mitigation",
+          "service"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "incident service error logs mitigation",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "incident:L3-L4",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 1.0,
+          "matched_terms": [
+            "error",
+            "incident",
+            "logs",
+            "mitigation",
+            "service"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "incident:L6-L7",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Escalate incidents with persistent customer-visible errors to the service owner.\nAfter recovery, record the cause, mitigation and follow-up tests.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.4,
+          "matched_terms": [
+            "mitigation",
+            "service"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "incident:L1-L1",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Example incident workflow",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.2,
+          "matched_terms": [
+            "incident"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-09",
+      "relevant_sources": [
+        "incident"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "error",
+          "incident",
+          "logs",
+          "mitigation",
+          "service"
+        ],
+        "known_terms": [
+          "error",
+          "incident",
+          "logs",
+          "mitigation",
+          "service"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "incident service error logs mitigation",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "incident:L3-L4",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.606532064132143,
+          "matched_terms": [
+            "error",
+            "incident",
+            "logs",
+            "mitigation",
+            "service"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "incident:L1-L1",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Example incident workflow",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.26290907310982803,
+          "matched_terms": [
+            "incident"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "incident:L6-L7",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Escalate incidents with persistent customer-visible errors to the service owner.\nAfter recovery, record the cause, mitigation and follow-up tests.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.208351517433383,
+          "matched_terms": [
+            "mitigation",
+            "service"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-10",
+      "relevant_sources": [
+        "incident"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "customer",
+          "errors",
+          "escalate",
+          "owner",
+          "service",
+          "visible"
+        ],
+        "known_terms": [
+          "customer",
+          "errors",
+          "escalate",
+          "owner",
+          "service",
+          "visible"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "escalate customer-visible errors service owner",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "incident:L6-L7",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Escalate incidents with persistent customer-visible errors to the service owner.\nAfter recovery, record the cause, mitigation and follow-up tests.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 1.0,
+          "matched_terms": [
+            "customer",
+            "errors",
+            "escalate",
+            "owner",
+            "service",
+            "visible"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "incident:L3-L4",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.16666666666666666,
+          "matched_terms": [
+            "service"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "returns:L3-L4",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.16666666666666666,
+          "matched_terms": [
+            "customer"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-10",
+      "relevant_sources": [
+        "incident"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "customer",
+          "errors",
+          "escalate",
+          "owner",
+          "service",
+          "visible"
+        ],
+        "known_terms": [
+          "customer",
+          "errors",
+          "escalate",
+          "owner",
+          "service",
+          "visible"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "escalate customer-visible errors service owner",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "incident:L6-L7",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Escalate incidents with persistent customer-visible errors to the service owner.\nAfter recovery, record the cause, mitigation and follow-up tests.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.6544835370935261,
+          "matched_terms": [
+            "customer",
+            "errors",
+            "escalate",
+            "owner",
+            "service",
+            "visible"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-11",
+      "relevant_sources": [
+        "evaluation"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "calibration",
+          "decision",
+          "freeze",
+          "threshold"
+        ],
+        "known_terms": [
+          "calibration",
+          "decision",
+          "freeze",
+          "threshold"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "freeze decision threshold calibration",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "evaluation:L3-L4",
+          "source_id": "evaluation",
+          "title": "Model evaluation checklist",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Keep development, calibration and evaluation rows separate.\nChoose a decision threshold on calibration data, then freeze it before final evaluation.",
+          "document_sha256": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+          "score": 1.0,
+          "matched_terms": [
+            "calibration",
+            "decision",
+            "freeze",
+            "threshold"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-11",
+      "relevant_sources": [
+        "evaluation"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "calibration",
+          "decision",
+          "freeze",
+          "threshold"
+        ],
+        "known_terms": [
+          "calibration",
+          "decision",
+          "freeze",
+          "threshold"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "freeze decision threshold calibration",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "evaluation:L3-L4",
+          "source_id": "evaluation",
+          "title": "Model evaluation checklist",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Keep development, calibration and evaluation rows separate.\nChoose a decision threshold on calibration data, then freeze it before final evaluation.",
+          "document_sha256": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+          "score": 0.6309565249160825,
+          "matched_terms": [
+            "calibration",
+            "decision",
+            "freeze",
+            "threshold"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-12",
+      "relevant_sources": [
+        "evaluation"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "duplicate",
+          "groups",
+          "precision",
+          "recall",
+          "test",
+          "train"
+        ],
+        "known_terms": [
+          "duplicate",
+          "groups",
+          "precision",
+          "recall",
+          "test",
+          "train"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "duplicate groups train test precision recall",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "evaluation:L6-L7",
+          "source_id": "evaluation",
+          "title": "Model evaluation checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Report precision and recall with the underlying confusion counts.\nCheck whether duplicate groups cross the train and test boundaries.",
+          "document_sha256": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+          "score": 1.0,
+          "matched_terms": [
+            "duplicate",
+            "groups",
+            "precision",
+            "recall",
+            "test",
+            "train"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "backup:L6-L7",
+          "source_id": "backup",
+          "title": "Backup runbook",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "To restore a deleted project, choose a snapshot and verify its checksum.\nTest a restore monthly; record whether the recovered files open correctly.",
+          "document_sha256": "4888d817e53bf51be724cc13dae6513e9ab22e9f8da1ea01c59b2b5b93a484bb",
+          "score": 0.16666666666666666,
+          "matched_terms": [
+            "test"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "invoice:L3-L4",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An invoice record has an invoice identifier, amount, currency and due date.\nFlag duplicate invoice identifiers before joining invoices to payment records.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.16666666666666666,
+          "matched_terms": [
+            "duplicate"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-12",
+      "relevant_sources": [
+        "evaluation"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "duplicate",
+          "groups",
+          "precision",
+          "recall",
+          "test",
+          "train"
+        ],
+        "known_terms": [
+          "duplicate",
+          "groups",
+          "precision",
+          "recall",
+          "test",
+          "train"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "duplicate groups train test precision recall",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "evaluation:L6-L7",
+          "source_id": "evaluation",
+          "title": "Model evaluation checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Report precision and recall with the underlying confusion counts.\nCheck whether duplicate groups cross the train and test boundaries.",
+          "document_sha256": "6ed0268894f5bb46d723078e338beb7617945d52f710218cdf17781d4ca052d8",
+          "score": 0.6799383422358962,
+          "matched_terms": [
+            "duplicate",
+            "groups",
+            "precision",
+            "recall",
+            "test",
+            "train"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-13",
+      "relevant_sources": [
+        "export"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "export",
+          "line",
+          "passage",
+          "query",
+          "range",
+          "source"
+        ],
+        "known_terms": [
+          "export",
+          "line",
+          "passage",
+          "query",
+          "range",
+          "source"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "export query source passage line range",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "export:L3-L4",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An evidence report contains the query, source identifier and passage line range.\nInclude the exact excerpt, document hash and lexical similarity score.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.8333333333333334,
+          "matched_terms": [
+            "line",
+            "passage",
+            "query",
+            "range",
+            "source"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "access:L6-L7",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.16666666666666666,
+          "matched_terms": [
+            "export"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "cache:L6-L7",
+          "source_id": "cache",
+          "title": "Search cache notes",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A deleted document must no longer appear in retrieved passages.\nRebuild the local index after adding, editing or removing source documents.",
+          "document_sha256": "3d06eaed15ac8c15e9fc7fd695ab153abb21a51943b6c27ed528b4f79d0b9986",
+          "score": 0.16666666666666666,
+          "matched_terms": [
+            "source"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-13",
+      "relevant_sources": [
+        "export"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "export",
+          "line",
+          "passage",
+          "query",
+          "range",
+          "source"
+        ],
+        "known_terms": [
+          "export",
+          "line",
+          "passage",
+          "query",
+          "range",
+          "source"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "export query source passage line range",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "export:L3-L4",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An evidence report contains the query, source identifier and passage line range.\nInclude the exact excerpt, document hash and lexical similarity score.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.5319629158674053,
+          "matched_terms": [
+            "line",
+            "passage",
+            "query",
+            "range",
+            "source"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "rel-14",
+      "relevant_sources": [
+        "export"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "csv",
+          "evidence",
+          "formula",
+          "json",
+          "spreadsheet"
+        ],
+        "known_terms": [
+          "csv",
+          "evidence",
+          "formula",
+          "json",
+          "spreadsheet"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "spreadsheet formula CSV JSON evidence",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "export:L6-L7",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Export JSON for full structured records and CSV for review in a spreadsheet.\nNeutralise formula-like CSV cells before opening a report in spreadsheet software.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.8,
+          "matched_terms": [
+            "csv",
+            "formula",
+            "json",
+            "spreadsheet"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "access:L6-L7",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.2,
+          "matched_terms": [
+            "evidence"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "export:L1-L1",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Evidence report format",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.2,
+          "matched_terms": [
+            "evidence"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-14",
+      "relevant_sources": [
+        "export"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "csv",
+          "evidence",
+          "formula",
+          "json",
+          "spreadsheet"
+        ],
+        "known_terms": [
+          "csv",
+          "evidence",
+          "formula",
+          "json",
+          "spreadsheet"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "spreadsheet formula CSV JSON evidence",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "export:L6-L7",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Export JSON for full structured records and CSV for review in a spreadsheet.\nNeutralise formula-like CSV cells before opening a report in spreadsheet software.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.6480892734005137,
+          "matched_terms": [
+            "csv",
+            "formula",
+            "json",
+            "spreadsheet"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "export:L1-L1",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Evidence report format",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.205708005793858,
+          "matched_terms": [
+            "evidence"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "rel-15",
+      "relevant_sources": [
+        "invoice"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "duplicate",
+          "identifier",
+          "invoice",
+          "lookup",
+          "payment"
+        ],
+        "known_terms": [
+          "duplicate",
+          "identifier",
+          "invoice",
+          "lookup",
+          "payment"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "duplicate invoice identifier payment lookup",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "invoice:L3-L4",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An invoice record has an invoice identifier, amount, currency and due date.\nFlag duplicate invoice identifiers before joining invoices to payment records.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.8,
+          "matched_terms": [
+            "duplicate",
+            "identifier",
+            "invoice",
+            "payment"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "invoice:L6-L7",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A many-to-one join requires unique keys in the payment lookup table.\nUnmatched records go to a human review queue rather than being silently discarded.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.4,
+          "matched_terms": [
+            "lookup",
+            "payment"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "returns:L6-L7",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Refunds go to the original payment method after inspection.\nDamaged packages should be reported with an order identifier and a description.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.4,
+          "matched_terms": [
+            "identifier",
+            "payment"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-15",
+      "relevant_sources": [
+        "invoice"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "duplicate",
+          "identifier",
+          "invoice",
+          "lookup",
+          "payment"
+        ],
+        "known_terms": [
+          "duplicate",
+          "identifier",
+          "invoice",
+          "lookup",
+          "payment"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "duplicate invoice identifier payment lookup",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "invoice:L3-L4",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An invoice record has an invoice identifier, amount, currency and due date.\nFlag duplicate invoice identifiers before joining invoices to payment records.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.5523462148299233,
+          "matched_terms": [
+            "duplicate",
+            "identifier",
+            "invoice",
+            "payment"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "invoice:L1-L1",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 1,
+          "line_end": 1,
+          "excerpt": "# Example invoice workflow",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.2827865671683907,
+          "matched_terms": [
+            "invoice"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "invoice:L6-L7",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A many-to-one join requires unique keys in the payment lookup table.\nUnmatched records go to a human review queue rather than being silently discarded.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.23683806738783686,
+          "matched_terms": [
+            "lookup",
+            "payment"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-16",
+      "relevant_sources": [
+        "invoice"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "keys",
+          "payment",
+          "records",
+          "unique",
+          "unmatched"
+        ],
+        "known_terms": [
+          "keys",
+          "payment",
+          "records",
+          "unique",
+          "unmatched"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "many-to-one unique payment keys unmatched records",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "invoice:L6-L7",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A many-to-one join requires unique keys in the payment lookup table.\nUnmatched records go to a human review queue rather than being silently discarded.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 1.0,
+          "matched_terms": [
+            "keys",
+            "payment",
+            "records",
+            "unique",
+            "unmatched"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "invoice:L3-L4",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An invoice record has an invoice identifier, amount, currency and due date.\nFlag duplicate invoice identifiers before joining invoices to payment records.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.4,
+          "matched_terms": [
+            "payment",
+            "records"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "export:L6-L7",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Export JSON for full structured records and CSV for review in a spreadsheet.\nNeutralise formula-like CSV cells before opening a report in spreadsheet software.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.2,
+          "matched_terms": [
+            "records"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "rel-16",
+      "relevant_sources": [
+        "invoice"
+      ],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "keys",
+          "payment",
+          "records",
+          "unique",
+          "unmatched"
+        ],
+        "known_terms": [
+          "keys",
+          "payment",
+          "records",
+          "unique",
+          "unmatched"
+        ],
+        "oov_terms": [],
+        "annotation": "known_relevant",
+        "hit_at_1": true,
+        "source_recall_at_3": 1.0,
+        "review": "Inspect annotation and exact source."
+      },
+      "query": "many-to-one unique payment keys unmatched records",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "invoice:L6-L7",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "A many-to-one join requires unique keys in the payment lookup table.\nUnmatched records go to a human review queue rather than being silently discarded.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.5781155725766522,
+          "matched_terms": [
+            "keys",
+            "payment",
+            "records",
+            "unique",
+            "unmatched"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "invoice:L3-L4",
+          "source_id": "invoice",
+          "title": "Example invoice workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An invoice record has an invoice identifier, amount, currency and due date.\nFlag duplicate invoice identifiers before joining invoices to payment records.",
+          "document_sha256": "6808140fd4bbc508afe989ed829ff6e5da7df180d1acba891c13fb3378290c58",
+          "score": 0.15428034468088309,
+          "matched_terms": [
+            "payment",
+            "records"
+          ],
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "none-01",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "no_corpus_vocabulary",
+        "analyzed_terms": [
+          "neutrino",
+          "quantum",
+          "telescope"
+        ],
+        "known_terms": [],
+        "oov_terms": [
+          "neutrino",
+          "quantum",
+          "telescope"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "No accepted passage."
+      },
+      "query": "quantum neutrino telescope",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": false,
+      "reason": "No passage passed the lexical gate. Try specific terms or check the source documents.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": []
+    },
+    {
+      "id": "none-01",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "no_corpus_vocabulary",
+        "analyzed_terms": [
+          "neutrino",
+          "quantum",
+          "telescope"
+        ],
+        "known_terms": [],
+        "oov_terms": [
+          "neutrino",
+          "quantum",
+          "telescope"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "No accepted passage."
+      },
+      "query": "quantum neutrino telescope",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": false,
+      "reason": "No passage passed the lexical gate. Try specific terms or check the source documents.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": []
+    },
+    {
+      "id": "none-02",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "no_corpus_vocabulary",
+        "analyzed_terms": [
+          "orchid",
+          "soil",
+          "sunlight",
+          "watering"
+        ],
+        "known_terms": [],
+        "oov_terms": [
+          "orchid",
+          "soil",
+          "sunlight",
+          "watering"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "No accepted passage."
+      },
+      "query": "orchid watering sunlight soil",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": false,
+      "reason": "No passage passed the lexical gate. Try specific terms or check the source documents.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": []
+    },
+    {
+      "id": "none-02",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "no_corpus_vocabulary",
+        "analyzed_terms": [
+          "orchid",
+          "soil",
+          "sunlight",
+          "watering"
+        ],
+        "known_terms": [],
+        "oov_terms": [
+          "orchid",
+          "soil",
+          "sunlight",
+          "watering"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "No accepted passage."
+      },
+      "query": "orchid watering sunlight soil",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": false,
+      "reason": "No passage passed the lexical gate. Try specific terms or check the source documents.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": []
+    },
+    {
+      "id": "none-03",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "no_corpus_vocabulary",
+        "analyzed_terms": [
+          "fermentation",
+          "sourdough",
+          "temperature"
+        ],
+        "known_terms": [],
+        "oov_terms": [
+          "fermentation",
+          "sourdough",
+          "temperature"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "No accepted passage."
+      },
+      "query": "sourdough fermentation temperature",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": false,
+      "reason": "No passage passed the lexical gate. Try specific terms or check the source documents.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": []
+    },
+    {
+      "id": "none-03",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "no_corpus_vocabulary",
+        "analyzed_terms": [
+          "fermentation",
+          "sourdough",
+          "temperature"
+        ],
+        "known_terms": [],
+        "oov_terms": [
+          "fermentation",
+          "sourdough",
+          "temperature"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "No accepted passage."
+      },
+      "query": "sourdough fermentation temperature",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": false,
+      "reason": "No passage passed the lexical gate. Try specific terms or check the source documents.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": []
+    },
+    {
+      "id": "none-04",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "refund",
+          "requests",
+          "years"
+        ],
+        "known_terms": [
+          "refund"
+        ],
+        "oov_terms": [
+          "requests",
+          "years"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "Accepted despite an unsupported annotation."
+      },
+      "query": "refund requests after two years",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "returns:L3-L4",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.3333333333333333,
+          "matched_terms": [
+            "refund"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "none-04",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "refund",
+          "requests",
+          "years"
+        ],
+        "known_terms": [
+          "refund"
+        ],
+        "oov_terms": [
+          "requests",
+          "years"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "Accepted despite an unsupported annotation."
+      },
+      "query": "refund requests after two years",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "returns:L3-L4",
+          "source_id": "returns",
+          "title": "Example returns policy",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "In this synthetic example, a customer may request a refund within 14 days of delivery.\nKeep the order identifier and original receipt for a refund review.",
+          "document_sha256": "37506fba1d31dc95bb8b508e4c7a552cc36ed4028021378bda84916479908eaa",
+          "score": 0.5360736617385635,
+          "matched_terms": [
+            "refund"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "none-05",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "authentication",
+          "factor",
+          "legally",
+          "mandatory"
+        ],
+        "known_terms": [
+          "authentication",
+          "factor"
+        ],
+        "oov_terms": [
+          "legally",
+          "mandatory"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "Accepted despite an unsupported annotation."
+      },
+      "query": "which authentication factor is legally mandatory",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "access:L6-L7",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.5,
+          "matched_terms": [
+            "authentication",
+            "factor"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "none-05",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "authentication",
+          "factor",
+          "legally",
+          "mandatory"
+        ],
+        "known_terms": [
+          "authentication",
+          "factor"
+        ],
+        "oov_terms": [
+          "legally",
+          "mandatory"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "Accepted despite an unsupported annotation."
+      },
+      "query": "which authentication factor is legally mandatory",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "access:L6-L7",
+          "source_id": "access",
+          "title": "Example access checklist",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Use a second authentication factor for team accounts.\nNever include passwords or API credentials in an evidence export.",
+          "document_sha256": "2d05320a23549e76fa1203b7211dc9e6c0d8c7daee2d3f655e9de13bfb13778e",
+          "score": 0.4335431948804123,
+          "matched_terms": [
+            "authentication",
+            "factor"
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "none-06",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "exact",
+          "guarantee",
+          "recovery",
+          "service",
+          "time"
+        ],
+        "known_terms": [
+          "exact",
+          "recovery",
+          "service",
+          "time"
+        ],
+        "oov_terms": [
+          "guarantee"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "Accepted despite an unsupported annotation."
+      },
+      "query": "exact service recovery time guarantee",
+      "method": "keyword",
+      "k": 3,
+      "threshold": 0.0,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "incident:L3-L4",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.4,
+          "matched_terms": [
+            "service",
+            "time"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "incident:L6-L7",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Escalate incidents with persistent customer-visible errors to the service owner.\nAfter recovery, record the cause, mitigation and follow-up tests.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.4,
+          "matched_terms": [
+            "recovery",
+            "service"
+          ],
+          "rank": 2
+        },
+        {
+          "passage_id": "export:L3-L4",
+          "source_id": "export",
+          "title": "Evidence report format",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "An evidence report contains the query, source identifier and passage line range.\nInclude the exact excerpt, document hash and lexical similarity score.",
+          "document_sha256": "ea9cb1ed2053c92bd09b4246f2da0181ed55bc5fb1da3b69591d02463dc3b6d0",
+          "score": 0.2,
+          "matched_terms": [
+            "exact"
+          ],
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "none-06",
+      "relevant_sources": [],
+      "diagnostics": {
+        "status": "accepted",
+        "analyzed_terms": [
+          "exact",
+          "guarantee",
+          "recovery",
+          "service",
+          "time"
+        ],
+        "known_terms": [
+          "exact",
+          "recovery",
+          "service",
+          "time"
+        ],
+        "oov_terms": [
+          "guarantee"
+        ],
+        "annotation": "known_unsupported",
+        "hit_at_1": null,
+        "source_recall_at_3": null,
+        "review": "Accepted despite an unsupported annotation."
+      },
+      "query": "exact service recovery time guarantee",
+      "method": "tfidf",
+      "k": 3,
+      "threshold": 0.15,
+      "accepted": true,
+      "reason": "Lexical matches found; inspect excerpts before using them.",
+      "warning": "Lexical similarity is not proof that a passage answers the question. No answer is generated.",
+      "corpus_sha256": "703c47d532f1cf36083439db3e5ea65893030030571509f930de66cf9d3b1511",
+      "document_count": 8,
+      "passage_count": 24,
+      "results": [
+        {
+          "passage_id": "incident:L3-L4",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 3,
+          "line_end": 4,
+          "excerpt": "Capture the service name, event time and impact in an incident report.\nThe on-call engineer checks the error logs before selecting a mitigation.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.2666246533392469,
+          "matched_terms": [
+            "service",
+            "time"
+          ],
+          "rank": 1
+        },
+        {
+          "passage_id": "incident:L6-L7",
+          "source_id": "incident",
+          "title": "Example incident workflow",
+          "line_start": 6,
+          "line_end": 7,
+          "excerpt": "Escalate incidents with persistent customer-visible errors to the service owner.\nAfter recovery, record the cause, mitigation and follow-up tests.",
+          "document_sha256": "dc93d797d1d8146fd08316dc89ad99a5b09a1e5b4952e75b3cee12afddc0c8a5",
+          "score": 0.2543222086264486,
+          "matched_terms": [
+            "recovery",
+            "service"
+          ],
+          "rank": 2
+        }
+      ]
+    }
+  ],
+  "warning": "Lexical scores are not answer confidence. Optional annotations are development-visible labels, not model judgments."
+}
